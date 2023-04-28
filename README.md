@@ -1,7 +1,7 @@
 > <img src="https://images.pexels.com/photos/4012966/pexels-photo-4012966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width: 100%;">
 
 
-## <img src="https://www.flaticon.com/free-icon/card_1726620?term=id&related_id=1726620" width="20" height="20"> CRUD 
+## <img src="https://pics.freeicons.io/uploads/icons/png/19862835691537355861-512.png" width="20" height="20"> CRUD 
 ### <img src="https://cdn-icons-png.flaticon.com/512/4072/4072731.png" width="20" height="20"> Mais sobre o projeto
 
 > <img src="https://cdn-icons-png.flaticon.com/512/4661/4661320.png" width="20" height="20">  Projeto desenvolvido para Web.
