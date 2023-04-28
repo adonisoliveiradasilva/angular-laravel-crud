@@ -20,5 +20,3 @@
 > <img src="https://pics.freeicons.io/uploads/icons/png/19218518301553750371-512.png" width="20" height="20"> Mysql.
 >
 
-
-
