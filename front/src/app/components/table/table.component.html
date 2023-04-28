@@ -1,0 +1,37 @@
+
+
+<div class="geral">
+
+  <div class="geral-top">
+    <app-botao (click)="visibleModal=!visibleModal;setModal('300px', 'Cadastrar', 0)" ></app-botao>
+  </div>
+
+
+  <div class="table shadow">
+    <mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="nome">
+        <mat-header-cell *matHeaderCellDef class="table-titulo"> Nome </mat-header-cell>
+        <mat-cell *matCellDef="let item" class="row-table"> {{item.nome}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="idade">
+        <mat-header-cell *matHeaderCellDef class="table-titulo"> Idade </mat-header-cell>
+        <mat-cell *matCellDef="let item" class="row-table"> {{item.idade}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="acoes">
+        <mat-header-cell *matHeaderCellDef class="table-titulo acoes"> Ações </mat-header-cell>
+        <mat-cell *matCellDef="let item" class="row-table acoes">
+          <button class="botao-acoes" (click)="visibleModal=!visibleModal;setModal('300px', 'Editar', item.id); "> <mat-icon>create</mat-icon> </button>
+          <button class="botao-acoes" (click)="visibleModal=!visibleModal;setModal('300px', 'Deletar', item.id); "> <mat-icon>delete</mat-icon> </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="colunas" class="head-table"></mat-header-row>
+      <mat-row *matRowDef="let item; columns: colunas;" ></mat-row>
+    </mat-table>
+  </div>
+
+</div>
+
+<app-modal *ngIf="visibleModal" (closeModalEvent)="visibleModal = !visibleModal" [altura]="altura" [nome]="nome" [idPessoa] = "idPessoa" (onSaveEvent)="obterTodosNomes()"></app-modal>

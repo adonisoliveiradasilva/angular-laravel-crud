@@ -1,0 +1,31 @@
+<div class="geral">
+  <div class="modal shadow" [style.height]="altura">
+    <div class="topo-modal" >
+        <span [ngClass]="{'font-red': nome == 'Deletar'}">
+          {{nome}}
+        </span>
+
+        <button class="botao" (click)="closeModal();">
+          <mat-icon class="icon">close</mat-icon>
+        </button>
+    </div>
+    <div class="corpo-modal">
+
+      <mat-form-field class="div-input">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" [(ngModel)]="nomePessoa" [disabled]="nome === 'Deletar'">
+      </mat-form-field>
+
+      <mat-form-field class="div-input">
+        <mat-label>Idade</mat-label>
+        <input matInput type="number" [(ngModel)]="idadePessoa" [disabled]="nome === 'Deletar'">
+      </mat-form-field>
+
+
+      <button class="salvar" [ngClass]="{'fundo-red': nome == 'Deletar'}" (click)="Function();">
+        {{nome}}
+      </button>
+
+    </div>
+  </div>
+</div>
